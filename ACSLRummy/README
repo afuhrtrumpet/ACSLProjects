@@ -1,0 +1,20 @@
+PROBLEM: ACSL Rummy is a card game played by two players with a standard deck of 52 cards. The card values (low to high) will be represented as A, 2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K and the suits (high to low) as S, H, C, D. Each player is dealt 7 cards. The object of the game is to form two sets, two runs or one of each. Sets are 3 or 4 cards of the same value, i.e., 3 jacks or 4 sevens. Runs are sequences of 3 or 4 cards of the same suit, i.e., 5, 6, 7 of spades or ace, 2, 3, 4 of hearts. In this version of the game, you will be asked to add and delete cards from a hand according to the rules below.
+INPUT: There will be 6 lines of input. The first line will contain 7 two-character strings representing the cards in a player’s hand. The characters in each string will be in value, suit order i.e. 7S represents the seven of spades, KH represents the king of hearts, and TD represents the 10 of diamonds. Lines 2 - 6 will represent the next 5 cards remaining in the deck. Select each of the 5 cards one at a time, determine if the card makes or extends a set or a run. If so, add that card to the hand and delete the lowest valued card not part of a run or set. Keep selecting until the game is over or the 5th card is selected. Lines 2 - 6 will each be used with the original Line #1.
+
+Example: Given the following hand: 4H, 5H, 6H, 8C, 8S, JD, JC
+If the next card selected is a 3H, keep that card because it completes a run of 4 cards and delete the 8C. Suits are ranked in the order S, H, C, D from high to low.
+If the next card selected is the 7H, that card is not kept because there is already a run or set of 4 cards.
+If the next card selected is the JS, that card is kept because it completes a run of 3 jacks. The 8S is deleted. Since the hand now consists of a run of 4 and a set of 3 cards, the game is over.
+
+OUTPUT: For each line 2 - 6 print the hand when the game is over or after the 5th card is processed. Print the cards as follows: 
+1. Print runs or sets of 4 cards first. The runs must be printed in card value order from low to high. The sets must be printed in suit order from high to low.
+2. Then print runs or sets of 3 cards. Print runs first as described above and then print sets as described above. If there are two runs of 3 cards then print the one that starts with the lowest card first. If there are 2 sets of 3 cards, print the one with the lowest card values first. 
+3. Then print any cards not in runs or sets in numerical (high to low) order, i.e., the largest card values are printed first and if there are ties they are printed in suit order (S, H, C, D). 
+
+SAMPLE INPUT	 		SAMPLE OUTPUT
+1. 4H, 5H, 6H, 8C, 8S, JD, JC	1. 3H, 4H, 5H, 6H, JS, JC, JD 
+2. 3H, 7H, JS, 3C, AH	 	2. 4H, 5H, 6H, JS, JC, JD 8S
+3. AH, 3D, JS, QH, 2C	 	3. 4H, 5H, 6H, 7H, JS, JC, JD
+4. 7H, 8H, JS, 8D, AS	 	4. 4H, 5H, 6H, JC, JD, 8S, 8C
+5. 2C, 5D, 7S, 9H, TC	 	5. 3H, 4H, 5H, 6H, JS, JC, JD 
+6. 3H, 7H, 8D, JS, AH

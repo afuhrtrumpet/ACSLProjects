@@ -1,0 +1,51 @@
+For most of this past summer, there was still a lockout and the potential for not having a 2012 National Football League (NFL) season. Two of the sticking points between owners and players were the high price for first round draft picks and the extension of the season to 18 games. The following statistics are available for the top 10 first-round draft picks in 2008. The first number represents the length of the contract in years, the second number represents the value of the contract in millions of dollars, and the third number represents the guaranteed money in millions of dollars.
+
+5, 57.5, 30
+6, 56.5, 29
+6, 72, 34
+6, 60, 26
+5, 51, 23
+5, 50, 21
+5, 49, 19
+5, 33.4, 17.177
+5, 23, 15.6
+5, 18.9, 13.8
+If you were at the negotiating table, you would need to find statistical information about these figures. For any professional athlete, there is always a chance that he/she will be injured so all contracts include an amount of quaranteed money if the athlete is unable to play for the entire length of the contract. The expected value is a mathematical way to determine a cash value based on the probabilities of two events occuring. ACSL rules will simplify the variables involved saying that there is a 3% chance each year that a player will get injured in any given 16-game season and a 3.375 % chance each year in an 18-game season. If L is the contract length, P is the chance of injury, V is the contract value, and G is the guaranteed money, then the formula is:
+E = V(1-LP) + LPG
+
+For example, the top draft choice would have an expected value for a 5-year contract of: E = (0.85)(57.5) + (0.15)(30) = 53.375 or $53 375 000 for 16-game seasons and E = (0.83125)(57.5) + (0.16875)(30) = 52.859375 or $52 859 375 for 18-game seasons.
+
+Input
+
+There will be 10 lines of input for the top 10 picks in any given year of the NFL draft. Data may be input by using spaces, commas, or on separate lines. Each line will include an integer representing the length of the contract in years, a real number giving the value of the entire contract in millions, and a real number giving the amount of guaranteed money for the entire contract in millions. Only the significant digits will be included (i.e. 57.5 for $57.5 million).
+
+Output
+
+For the 10 lines of input, find the following:
+
+The range (difference between the highest and the lowest) of salaries per game in an 16- game season
+The midrange (average of the highest salary per game and the lowest salary per game) for a 18-game season
+The highest expected value of the entire contract for 16-game seasons and which draft pick it was (both must be correct)
+The average expected value of the entire contract for 18-game seasons for all 10 players
+The median (average of the 5th and 6th highest) annual salary for all players
+All outputs should be rounded to the nearest dollar if necessary. ACSL will accept answers that are within ±1 of the given answer.
+
+Sample Input
+
+5 57.5 30
+6 56.5 29
+6 72 34
+6 60 26
+5 51 23
+5 50 21
+5 49 19
+5 33.4 17.177
+5 23 15.6
+5 18.9 13.8
+Sample Output
+
+513750
+438333
+65160000 by #3
+42698237
+9900000
