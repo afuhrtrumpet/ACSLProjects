@@ -1,4 +1,4 @@
-Problem: The queen on the ACSL chess board is the most versatile piece. It can move at most N cells (where N is determined at the start of each game) in the following directions: 
+Problem: The queen on the ACSL chess board is the most versatile piece. It can move in the following directions: 
 1. Left or Right to the borders of the chess board
 2. Up or Down to the borders of the chess board
 3. Diagonally to the borders of the chess board
@@ -23,6 +23,7 @@ Sample Input:
 3. 5,3,2
 4. 5,4,3
 5. 2,3,1
+
 Sample Output:
 1. 8
 2. 19

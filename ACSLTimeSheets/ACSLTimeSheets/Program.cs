@@ -74,32 +74,36 @@ namespace ACSLTimeSheets
                 }
                 return sum;
             }
-            return -1;
         }
 
+        /// <summary>
+        /// Return the hour corresponding to a given character.
+        /// </summary>
+        /// <param name="mander">The character representing an hour.</param>
+        /// <returns>The hour number corresponding to the given character.</returns>
         static double determineHour(char mander)
         {
             switch (mander)
             {
-                case '1': return 0; break;
-                case '2': return 0.5; break;
-                case '3': return 1; break;
-                case '4': return 1.5; break;
-                case '5': return 2; break;
-                case '6': return 2.5; break;
-                case '7': return 3; break;
-                case '8': return 3.5; break;
-                case '9': return 4; break;
-                case 'A': return 4.5; break;
-                case 'B': return 5; break;
-                case 'C': return 5.5; break;
-                case 'D': return 6; break;
-                case 'E': return 6.5; break;
-                case 'F': return 7; break;
-                case 'G': return 7.5; break;
-                case 'H': return 8; break;
+                case '1': return 0;
+                case '2': return 0.5;
+                case '3': return 1;
+                case '4': return 1.5;
+                case '5': return 2;
+                case '6': return 2.5;
+                case '7': return 3;
+                case '8': return 3.5;
+                case '9': return 4;
+                case 'A': return 4.5;
+                case 'B': return 5;
+                case 'C': return 5.5;
+                case 'D': return 6;
+                case 'E': return 6.5;
+                case 'F': return 7;
+                case 'G': return 7.5;
+                case 'H': return 8;
+                default: return -1;
             }
-            return -1;
         }
     }
 }

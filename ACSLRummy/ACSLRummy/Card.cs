@@ -11,6 +11,11 @@ namespace ACSLRummy
         private int myValue = 0;
         private int mySuit = 0;
 
+        /// <summary>
+        /// Constructs a card based on characters representing the value and suit.
+        /// </summary>
+        /// <param name="value">Value of the card (ace, five, jack, king, etc) in character form.</param>
+        /// <param name="suit">Suit of the card, either S, H, C, or D.</param>
         public Card(char value, char suit)
         {
             cValue = value;
@@ -57,6 +62,10 @@ namespace ACSLRummy
             }
         }
 
+        /// <summary>
+        /// Put's the card back into a two-character string.
+        /// </summary>
+        /// <returns>The two-character string the card was constructed with.</returns>
         public override string ToString()
         {
             return cValue.ToString() + cSuit.ToString();
